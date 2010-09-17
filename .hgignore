@@ -1,0 +1,10 @@
+syntax: glob
+
+target
+*.orig
+.project
+.classpath
+target
+classes
+bin
+
