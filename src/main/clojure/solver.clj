@@ -18,10 +18,8 @@
 
 (def solution (ref nil))
 
-(defmacro lazy-init [f & args]
-  `(let [x# (delay (~f ~@args))]
-    #(force x#)))
-    
+(def filename "dictionary.txt")
+
 (defn solve-word [word input]
        (loop [idx 0]
        (let [mapa1 (make-map word)]
