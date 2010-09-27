@@ -5,10 +5,12 @@
 (use 'clojure.contrib.duck-streams)
 (use 'clojure.contrib.seq-utils)
 
+(def filename "dictionary.txt")
+
 (defn read-word [idxForWord] (with-open [rdr (reader "dictionary.txt")]
 (nth (line-seq rdr)idxForWord)))
 
-;(defn read-word [idxForWord] (nth (read-lines "dictionary.txt")idxForWord))
+(defn read-word [idxForWord] (nth (read-lines "dictionary.txt")idxForWord))
 
 (defn make-map [string] (frequencies (str string)))
   
@@ -17,8 +19,6 @@
 (def all-words  (count (read-lines (str filename))))  
 
 (def solution (ref nil))
-
-(def filename "dictionary.txt")
 
 (defn solve-word [word input]
        (loop [idx 0]
