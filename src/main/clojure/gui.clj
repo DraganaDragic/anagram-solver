@@ -159,4 +159,4 @@
     (def main-frame (create-frame))
     (.setVisible main-frame true))
 
-(main)
+
