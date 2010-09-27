@@ -7,16 +7,19 @@
 
 (def filename "dictionary.txt")
 
-(defn read-word [idxForWord] (with-open [rdr (reader "dictionary.txt")]
-(nth (line-seq rdr)idxForWord)))
+(def dictionary
+(with-open [rdr (reader "dictionary.txt")]
+(into [] (line-seq rdr))))
 
-(defn read-word [idxForWord] (nth (read-lines "dictionary.txt")idxForWord))
+(defn read-word [idxForWord]
+(nth dictionary idxForWord))
+
 
 (defn make-map [string] (frequencies (str string)))
   
 (defn count-keys [word] (count (keys(frequencies word))) ) 
     
-(def all-words  (count (read-lines (str filename))))  
+(def all-words  (count dictionary))  
 
 (def solution (ref nil))
 

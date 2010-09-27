@@ -2,7 +2,7 @@
 
 
 
-(:import (java.awt BorderLayout Event GridLayout Toolkit)
+(import (java.awt BorderLayout Event GridLayout Toolkit)
            (java.awt.event KeyEvent)
            (javax.swing AbstractAction Action BorderFactory
            JFrame JPanel JButton JMenu JMenuBar JTextField JLabel
@@ -11,6 +11,8 @@
            )
           
 (use 'clojure.contrib.seq-utils)
+
+(use 'solver)
       
 
 (defmacro lazy-init [f & args]
