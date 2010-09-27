@@ -38,20 +38,10 @@
                         <artifactId>hiccup</artifactId>
                         <version>0.2.1</version>
                 </dependency>
-                <dependency>
- <groupId>org.eclipse</groupId>
- <artifactId>swt.gtk.linux.x86</artifactId>
- <version>3.6.0</version>
-</dependency>
-<dependency>
- <groupId>org.eclipse</groupId>
- <artifactId>swt.gtk.win32.win32</artifactId>
- <version>3.6.0</version>
-</dependency>
-
-
+                
         </dependencies>
-        <build>
+        	
+             <build>
                 <plugins>
                         <plugin>
                                 <groupId>com.theoryinpractise</groupId>
