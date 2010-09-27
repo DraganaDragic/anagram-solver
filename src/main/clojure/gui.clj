@@ -1,2 +1,2 @@
-(ns src.main.clojure.gui)
+(ns gui)
 
