@@ -1,2 +1,2 @@
-(ns src.main.clojure.solver)
+(ns solver)
 
